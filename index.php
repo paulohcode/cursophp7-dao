@@ -8,7 +8,6 @@ require_once "config.php";
 //echo $root;
 
 //carrega uma lista de usuario.
-
 //$lista = Usuario::getList();
 //echo json_encode($lista);
 
@@ -17,8 +16,20 @@ require_once "config.php";
 //echo json_encode($search);
 
 //carrega um usuario usando o login e a senha
+//$usuario = new Usuario();
+//$usuario->login("Paulo", "123456");
+//echo $usuario;
+
+//insert crirando um novo usuario
+//$aluno = new Usuario("Nunes", "Chefe", "123456789");
+//$aluno->insert();
+//echo $aluno;
+
 $usuario = new Usuario();
-$usuario->login("Paulo", "123456");
+
+$usuario->loadById(8);
+
+$usuario->update("Silva", "silva", "1234524");
 
 echo $usuario;
 
